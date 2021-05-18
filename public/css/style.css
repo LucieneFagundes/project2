@@ -1,0 +1,7 @@
+body{
+    background: #dadadb ;
+}
+
+#formulario-perguntas{
+    margin-top: 5vh; /* VH É A UNIDADE EM PORCETAGEM. NESTE CASO, ESPASSAMENTO DE 5%*/
+}

@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+<%- include('partials/homenavbar.ejs') %>
+
+    <div class="container">
+        <hr>
+        <div class="jumbotron">
+            <h1 class="display-4">Bem vindo ao meu portifólio</h1>
+            <p class="lead">Esta é uma pagina simples para demonstração do meu desenvolvimento com algumas linguagens de programação</p>
+            <hr class="my-4">
+            <p>Esta é uma pagina simples para demonstração do meu desenvolvimento com algumas linguagens de programação</p>
+        </div>
+        <hr>
+
+        <%articles.forEach(articles => {%>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= articles.title%></h2>
+                </div>
+                <div class="card-body">
+                    <a href="/<%= articles.slug%>" class="btn btn-outline-success"> Ler artigo </a>
+                </div>
+            </div>
+            <br>    
+        <%})%>
+
+    </div>
+
+<%- include('partials/footer.ejs') %>

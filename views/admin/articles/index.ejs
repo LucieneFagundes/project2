@@ -1,0 +1,50 @@
+<%- include('../../partials/header.ejs') %>
+<%- include('../../partials/navbar.ejs') %>
+    <div class="container">
+
+        <hr>
+        <h2>Artigo</h2> 
+        <a href="/admin/articles/new"><button class="btn btn-outline-primary">Novo Artigo</button></a>
+        <hr>
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Slug</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% articles.forEach(articles => { %>
+                <tr>
+                    <th><%= articles.id%></th>
+                    <th><%= articles.title%></th>
+                    <th><%= articles.slug%></th>
+                    <th><%= articles.category.title%></th>
+                    <th>
+                        <form action="/articles/delete" method="POST"  style="display: inline;" onsubmit="confirmDelete(event, this)" >
+                            <input type="hidden" name="id" value="<%=articles.id%>">
+                            <button class="btn btn-danger" >Excluir</button>
+                        </form>
+                    </th>
+                </tr>
+                <% }) %>
+            </tbody>
+
+        </table>
+    </div>
+<%- include('../../partials/footer.ejs') %>
+<script>
+    function confirmDelete(event, form){
+        event.preventDefault();
+        var decision = confirm("Você quer apagar este artigo?");
+        if(decision){
+            form.submit();
+       }
+
+    }
+    
+</script>
