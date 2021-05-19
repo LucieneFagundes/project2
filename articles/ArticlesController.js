@@ -65,7 +65,7 @@ router.get('/admin/articles/edit/:id', (req, res) => {
     var id = req.params.id;
 
     if(isNaN(id)){
-        res.redirect('/admin/articles/index', console.log('Parametri não encontrado'));
+        res.redirect('/admin/articles/index');
     }
 
     Article.findByPk(
