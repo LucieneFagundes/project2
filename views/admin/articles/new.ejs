@@ -11,7 +11,7 @@
                     <input type="text" name="title" placeholder="Título do artigo" class="form-control">
                 <br>    
                     <label for="category">Categoria</label>
-                    <select name="category" id="category" class="form-control" aria-placeholder="Escolha a Categoria"> 
+                    <select name="category" id="category" class="form-control" aria-placeholder="Escolha a Categoria">
                             <%categories.forEach((categories) =>{%>
                                 <option value="<%= categories.id%>"><%= categories.title%></option>
                             <%}) %>

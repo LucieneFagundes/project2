@@ -11,18 +11,19 @@
             <form action="/articles/update" method="POST">
                 <input type="text" id="title" name="title" class="form-control" value="<%=articles.title%>">
                 <input type="hidden" name="id" value="<%=articles.id%>">
-                <hr>
+                <br>
                 <select name="category" class="form-control">
                     <%categories.forEach(categories => { %>
-                    <option value="<%=categories.id%>"><%=categories.title%></option>
+                        <%if (categories.id == articles.categoryId) {%>
+                            <option value="<%=categories.id%>" selected><%=categories.title%></option>
+                        <% }else{ %>
+                            <option value="<%=categories.id%>"><%=categories.title%></option>
+                        <% } %>
                     <% }) %>
                 </select> 
-                
-                <hr>
-                
+                <br>
                 <textarea name="body" id="article" class="form-control"><%=articles.body%></textarea>
-                <hr>
-
+                <br>
                 <button class="btn btn-primary">Atualizar</button>
             </form>
             </div>
