@@ -1,12 +1,12 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Segundo projeto com um curso da Udemy.\r Nele estou aprendendo a desenvolver projetos em Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Luciene Fagundes",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -19,5 +19,13 @@
     "nodemon": "^2.0.7",
     "sequelize": "^6.6.2",
     "slugify": "^1.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucieneNascimento/project2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LucieneNascimento/project2/issues"
+  },
+  "homepage": "https://github.com/LucieneNascimento/project2#readme"
 }
